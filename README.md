@@ -1,6 +1,14 @@
 # one_class
 2025년 1기 원클래스
 
+
+p5js 시리얼 프로그램 : https://github.com/p5-serial/p5.serialcontrol/releases/tag/0.1.2
+
+p5.js 웹 에디터 접속하여 모델 올리기 : https://editor.p5js.org/krantas/sketches/IKUf43rB
+
+
+
+
 --------------------------------------------------------------------------------------------  
 1. TensorFlow 예제 (MNIST 손글씨 숫자 분류)  
    MNIST 데이터로 손글씨 분류, 학습 정확도 그래프 확인 가능.  
