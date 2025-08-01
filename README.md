@@ -1,6 +1,60 @@
 # one_class
 2025년 1기 원클래스
 
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x20, 16, 2); //lcd 주소값, 가로 출력 사이즈, 세로 출력 사이즈
+
+void setup()
+{
+  lcd.init();				//lcd 초기화
+  lcd.clear();         		//lcd 문자 지우기
+  lcd.backlight(); 			//lcd 백라이트 켜기
+
+}
+
+void loop()
+{
+  lcd.setCursor(2,0); 		//문자를 출력할 위치를 x = 2, y = 0으로 옮기기
+  lcd.print("hello world"); //hello world 출력하기
+  lcd.setCursor(0,1); 		//위치를 x = 0, y = 1로 옮기기
+  lcd.print("I want go Home"); //I want go Home" 출력하기
+  delay(1000);				   //1초 기다리기
+  for(int a = 0; a < 16; a++)  //16번 반복하기
+  {
+    lcd.scrollDisplayLeft();   //모든 문자를 왼쪽으로 한 칸 이동하기
+    delay(500);				   //0.5초 기다리기
+  }
+}
+
+==========================================================================
+
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x20, 16, 2); //lcd 주소값, 가로 출력 사이즈, 세로 출력 사이즈
+
+void setup()
+{
+  lcd.init();				//lcd 초기화
+  lcd.clear();         		//lcd 문자 지우기
+  lcd.backlight(); 			//lcd 백라이트 켜기
+
+}
+
+void loop()
+{
+  lcd.setCursor(2,0); 		//문자를 출력할 위치를 x = 2, y = 0으로 옮기기
+  lcd.print("hello world"); //hello world 출력하기
+  lcd.setCursor(0,1); 		//위치를 x = 0, y = 1로 옮기기
+  lcd.print("I want go Home"); //I want go Home" 출력하기
+  delay(1000);				   //1초 기다리기
+  for(int a = 0; a < 16; a++)  //16번 반복하기
+  {
+    lcd.scrollDisplayLeft();   //모든 문자를 왼쪽으로 한 칸 이동하기
+    delay(500);				   //0.5초 기다리기
+  }  
+}
+
 
 p5js 시리얼 프로그램 : https://github.com/p5-serial/p5.serialcontrol/releases/tag/0.1.2
 
